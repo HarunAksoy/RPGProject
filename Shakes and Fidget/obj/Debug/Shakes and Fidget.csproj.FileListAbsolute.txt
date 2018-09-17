@@ -1,0 +1,21 @@
+C:\Users\vmadmin\RiderProjects\Shakes and Fidget\Shakes and Fidget\obj\Debug\Shakes and Fidget.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\RiderProjects\Shakes and Fidget\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\Shakes and Fidget\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\Shakes and Fidget\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\Shakes and Fidget\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\obj\Debug\Shakes and Fidget.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject-master\Shakes and Fidget\obj\Debug\Shakes and Fidget.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\RiderProjects\RPGProject-master\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject-master\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject-master\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject-master\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\bin\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes and Fidget.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes and Fidget.csproj.CoreCompileInputs.cache
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.exe
+C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.pdb
