@@ -22,7 +22,6 @@ namespace Shakes_and_Fidget
                 {
                     Performance.gold += 50;
                     Level.level++;
-                    Level.checkLevelFour();
                     Home.printMenuHome();
                     Home.startHome();
                     Console.Write("You are done with the Quest!");

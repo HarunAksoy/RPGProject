@@ -6,7 +6,7 @@ namespace Shakes_and_Fidget
 {
     public class Level
     {
-        public static int level = 1;
+        public static int level = 3;
 
         public static void firstLevel()
         {
@@ -21,6 +21,11 @@ namespace Shakes_and_Fidget
         public static void thirdLevel()
         {
             Quest.thirdQuest();
+        }
+
+        public static void fourthLevel()
+        {
+            Quest.fourthQuest();
         }
 
 
@@ -40,14 +45,10 @@ namespace Shakes_and_Fidget
             {
                 thirdLevel();
             }
-        }
 
-        public static void checkLevelFour()
-        {
             if (level == 4)
             {
-                level--;
-                Console.Clear();
+                fourthLevel();
             }
         }
     }

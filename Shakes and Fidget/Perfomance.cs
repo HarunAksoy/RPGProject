@@ -21,14 +21,28 @@ namespace Shakes_and_Fidget
             {
                 Console.WriteLine("You need Energy to do a quest!");
             }
-
-            else
+            
+            else if(Level.level == 1 || Level.level == 2)
             {
                 energy -= questEnergy;
 
                 myPlayer.Play();
                 Stopwatch.Timer();
             }
+
+            else if (Level.level == 3)
+            {
+                energy -= questEnergy;
+                Console.Clear();
+                Endboss.startGame();
+            }
+            
+            else
+            {
+                
+                Console.WriteLine("To be continued!");
+            }
+            
         }
 
 

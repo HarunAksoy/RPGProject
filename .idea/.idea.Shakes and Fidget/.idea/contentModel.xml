@@ -8,6 +8,7 @@
       <e p="Shakes and Fidget" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Character.cs" t="Include" />
+        <e p="Endboss.cs" t="Include" />
         <e p="Home.cs" t="Include" />
         <e p="Level.cs" t="Include" />
         <e p="Menu.cs" t="Include" />

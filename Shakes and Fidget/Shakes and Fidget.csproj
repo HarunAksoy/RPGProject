@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Endboss.cs" />
     <Compile Include="Home.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Perfomance.cs" />

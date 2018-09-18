@@ -50,7 +50,7 @@ namespace Shakes_and_Fidget
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
             Console.WriteLine("\n");
-            Console.WriteLine("Energy Cost: {0}, Earned gold: 50" , Performance.questEnergy);
+            Console.WriteLine("Energy Cost: {0}, Earned gold: 50", Performance.questEnergy);
             Console.WriteLine("\n");
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
@@ -60,6 +60,23 @@ namespace Shakes_and_Fidget
                 "Quest Description: Do you have time for a small assignment? Journey to the rotting land.");
             Console.WriteLine("But I do not know exactly, because so far no one has returned from there.");
             Console.WriteLine("If the rumors are true, I'd like to have that written by you.");
+            Console.WriteLine("\n");
+        }
+
+        public static void fourthQuest()
+        {
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
+            Console.SetCursorPosition(7, 1);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("\n");
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
+            Console.WriteLine("\n");
+            Console.WriteLine("Quest Title:");
+            Console.WriteLine(
+                "Quest Description: To be continued!");
             Console.WriteLine("\n");
         }
     }
