@@ -34,7 +34,7 @@ namespace Shakes_and_Fidget
         public static void printMenuHome()
         {
             Console.OutputEncoding = Encoding.Unicode;
-            
+
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
@@ -74,7 +74,7 @@ namespace Shakes_and_Fidget
                         Performance.checkGold();
                         break;
                     case 3:
-                        Console.WriteLine("In Bearbeitung!");
+                        SaveLoad.GameSave();
 
                         break;
                     case 4:

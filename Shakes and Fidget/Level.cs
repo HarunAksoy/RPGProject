@@ -6,7 +6,7 @@ namespace Shakes_and_Fidget
 {
     public class Level
     {
-        public static int level = 3;
+        public static int level = 1;
 
         public static void firstLevel()
         {

@@ -47,8 +47,9 @@ namespace Shakes_and_Fidget
                     Character.startClasse();
                     break;
                 case 2:
+                    SaveLoad.GameLoad();
                     Console.Clear();
-                    Console.WriteLine("In Bearbeitung!");
+                    Home.printMenuHome();
                     break;
                 case 3:
                     Environment.Exit(0);
