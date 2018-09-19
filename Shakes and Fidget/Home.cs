@@ -88,15 +88,14 @@ namespace Shakes_and_Fidget
 
         private static void checkEntryQuest(int task)
         {
+            CharacterMethods methods = new CharacterMethods();
             switch (task)
             {
                 case 1:
                     Performance.checkEnergy();
                     break;
                 case 2:
-                    Console.Clear();
-                    printMenuHome();
-                    startHome();
+                    methods.continueHome();
                     break;
                 default:
                     Console.WriteLine("Invalid Input! Try again.");

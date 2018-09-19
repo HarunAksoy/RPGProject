@@ -8,7 +8,7 @@ namespace Shakes_and_Fidget
         {
             
             Menu menu = new Menu();
-            Menu.start();
+            menu.start();
         }
     }
 }

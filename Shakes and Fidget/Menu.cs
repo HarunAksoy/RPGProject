@@ -7,7 +7,7 @@ namespace Shakes_and_Fidget
     {
         private static bool isPlaying = true;
 
-        public static void start()
+        public void start()
         {
             
 
@@ -43,8 +43,6 @@ namespace Shakes_and_Fidget
                     Console.Clear();
                     Character.checkEntryName();
                     Console.Clear();
-                    Character.printMenuClasse();
-                    Character.startClasse();
                     break;
                 case 2:
                     SaveLoad.GameLoad();

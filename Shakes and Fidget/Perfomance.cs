@@ -48,6 +48,7 @@ namespace Shakes_and_Fidget
 
         public static void checkGold()
         {
+            CharacterMethods methods = new CharacterMethods();
             if (gold < 50)
             {
                 Console.WriteLine("You dont have enough gold!");
@@ -56,8 +57,7 @@ namespace Shakes_and_Fidget
             {
                 gold -= 50;
                 energy += 100;
-                Console.Clear();
-                Home.printMenuHome();
+                methods.continueHome();
             }
         }
     }

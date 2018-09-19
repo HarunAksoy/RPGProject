@@ -23,33 +23,34 @@ namespace Shakes_and_Fidget
 
         public static void Youwon()
         {
+            CharacterMethods methods = new CharacterMethods();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n\tYou Won!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("(Press any key to get to home)");
             Console.ReadKey();
-            Performance.gold += 50;
+            Performance.gold += 500;
             Level.level++;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            Home.printMenuHome();
-            Home.startHome();
+            methods.continueHome();
+            
         }
 
         public static void Youlost()
         {
+            CharacterMethods methods = new CharacterMethods();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\n\tYou Lost!!!!!!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("(Press any key to get to home)");
             Console.ReadKey();
-            Performance.gold += 500;
+            Performance.gold += 50;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            Home.printMenuHome();
-            Home.startHome();
+            methods.continueHome();
         }
 
         public static void Action()

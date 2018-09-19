@@ -8,8 +8,8 @@ namespace Shakes_and_Fidget
     {
         public static void Timer()
 
-
         {
+            CharacterMethods methods = new CharacterMethods();
             for (int a = 3; a >= 0; a--)
             {
                 Console.Write("You are on Quest {0}", a);
@@ -22,8 +22,7 @@ namespace Shakes_and_Fidget
                 {
                     Performance.gold += 50;
                     Level.level++;
-                    Home.printMenuHome();
-                    Home.startHome();
+                    methods.continueHome();
                     Console.Write("You are done with the Quest!");
                 }
             }

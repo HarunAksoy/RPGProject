@@ -9,18 +9,11 @@ namespace Shakes_and_Fidget
 {
     public static class SaveLoad
     {
-        public static List<string> Files = new List<string>();
-
-        /*void Start()
-        {
-            for (int i = 0; i < Files.Count; i++)
-            {
-                
-            }
-        }*/
+        
 
         public static void GameLoad()
         {
+            CharacterMethods methods = new CharacterMethods();
             Console.Clear();
             Console.WriteLine("Ihr Benutzername: ");
             Character.name = Console.ReadLine();
@@ -36,14 +29,8 @@ namespace Shakes_and_Fidget
                 Performance.experience = Convert.ToInt32(expString);
                 Performance.energy = Convert.ToInt32(enrgyString);
                 Level.level = Convert.ToInt32(lvlString);
-
-
                 tr.Close();
-
-
-                Console.Clear();
-                Home.printMenuHome();
-                Home.startHome();
+                methods.continueHome();
             }
             else
             {
@@ -54,6 +41,7 @@ namespace Shakes_and_Fidget
 
         public static void GameSave()
         {
+            CharacterMethods methods = new CharacterMethods();
             if (!File.Exists("SavedGame.txt"))
             {
                 TextWriter tw = new StreamWriter("SavedGame" + Character.name + ".txt");
@@ -62,10 +50,9 @@ namespace Shakes_and_Fidget
                 tw.WriteLine(Performance.experience);
                 tw.WriteLine(Performance.energy);
                 tw.WriteLine(Level.level);
-
                 tw.Close();
                 Console.Clear();
-                Home.printMenuHome();
+                methods.continueHome();
             }
         }
     }
