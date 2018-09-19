@@ -48,8 +48,6 @@ namespace Shakes_and_Fidget
                     break;
                 case 2:
                     SaveLoad.GameLoad();
-                    Console.Clear();
-                    Home.printMenuHome();
                     break;
                 case 3:
                     Environment.Exit(0);

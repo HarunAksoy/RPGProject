@@ -18,37 +18,45 @@ namespace Shakes_and_Fidget
                 
             }
         }*/
-        
+
         public static void GameLoad()
         {
             Console.Clear();
-            
-            TextReader tr = new StreamReader("SavedGame" +  DateTime.Now.ToString("yyyyMMdd_hhmmss" + ".txt"));
-            
-            Character.name = tr.ReadLine();
-            string goldString = tr.ReadLine();
-            string expString = tr.ReadLine();
-            string enrgyString = tr.ReadLine();
-            string lvlString = tr.ReadLine();
-            Performance.gold = Convert.ToInt32(goldString);
-            Performance.experience = Convert.ToInt32(expString);
-            Performance.energy = Convert.ToInt32(enrgyString);
-            Level.level = Convert.ToInt32(lvlString);
-            
-            
-            tr.Close();
-            
-            
-            Console.Clear();
-            Home.printMenuHome();
-            Home.startHome();
+            Console.WriteLine("Ihr Benutzername: ");
+            Character.name = Console.ReadLine();
+            if (File.Exists("SavedGame" + Character.name + ".txt"))
+            {
+                TextReader tr = new StreamReader("SavedGame" + Character.name + ".txt");
+                Character.name = tr.ReadLine();
+                string goldString = tr.ReadLine();
+                string expString = tr.ReadLine();
+                string enrgyString = tr.ReadLine();
+                string lvlString = tr.ReadLine();
+                Performance.gold = Convert.ToInt32(goldString);
+                Performance.experience = Convert.ToInt32(expString);
+                Performance.energy = Convert.ToInt32(enrgyString);
+                Level.level = Convert.ToInt32(lvlString);
+
+
+                tr.Close();
+
+
+                Console.Clear();
+                Home.printMenuHome();
+                Home.startHome();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Dieser Benutzer existiert nicht oder wurde nicht abgespeichert");
+            }
         }
-        
+
         public static void GameSave()
         {
-            if (File.Exists("SavedGame.txt"))
+            if (!File.Exists("SavedGame.txt"))
             {
-                TextWriter tw = new StreamWriter("SavedGame " + Character.name + ".txt");
+                TextWriter tw = new StreamWriter("SavedGame" + Character.name + ".txt");
                 tw.WriteLine(Character.name);
                 tw.WriteLine(Performance.gold);
                 tw.WriteLine(Performance.experience);
@@ -59,24 +67,6 @@ namespace Shakes_and_Fidget
                 Console.Clear();
                 Home.printMenuHome();
             }
-
-            else
-            {
-                {
-                    TextWriter tw = new StreamWriter("SavedGame " + Character.name + ".txt");
-                    tw.WriteLine(Character.name);
-                    tw.WriteLine(Performance.gold);
-                    tw.WriteLine(Performance.experience);
-                    tw.WriteLine(Performance.energy);
-                    tw.WriteLine(Level.level);
-
-                    tw.Close();
-                    Console.Clear();
-                    Home.printMenuHome();
-                }
-            }
         }
-        
-        
     }
 }

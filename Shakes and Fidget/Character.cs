@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -46,7 +47,6 @@ namespace Shakes_and_Fidget
             Console.WriteLine("Blood Elf [2]");
             Console.WriteLine("Ogre [3]");
             Console.WriteLine("Goblin [4]");
-            
         }
 
         public static void checkEntryName()
