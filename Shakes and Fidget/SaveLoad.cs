@@ -10,17 +10,23 @@ namespace Shakes_and_Fidget
         {
             if (File.Exists("SavedGame.txt"))
             {
-                TextWriter tw = new StreamWriter("SavedGame1.txt");
-
-                tw.WriteLine(Character.name);
-                tw.WriteLine(Performance.gold);
-                tw.WriteLine(Performance.experience);
-                tw.WriteLine(Performance.energy);
-                tw.WriteLine(Level.level);
+                string validatedName = name;
+                int tries = 1;
                 
-                tw.Close(); //TextWriter schliessen
-                Console.Clear();
-                Home.printMenuHome(); //Homemenu anzeigen
+                while (File.Exists("SavedGame.txt"))
+                {
+                    validatedName = string.Format("{0} [{1}]", name, tries++);
+                    TextWriter tw = new StreamWriter("SavedGame.txt");
+                    tw.WriteLine(Character.name);
+                    tw.WriteLine(Performance.gold);
+                    tw.WriteLine(Performance.experience);
+                    tw.WriteLine(Performance.energy);
+                    tw.WriteLine(Level.level);
+
+                    tw.Close();
+                    Console.Clear();
+                    Home.printMenuHome();
+                }
             }
             else
             {
@@ -31,7 +37,7 @@ namespace Shakes_and_Fidget
                     tw.WriteLine(Performance.experience);
                     tw.WriteLine(Performance.energy);
                     tw.WriteLine(Level.level);
-                    
+
                     tw.Close();
                     Console.Clear();
                     Home.printMenuHome();
