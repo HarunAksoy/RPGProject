@@ -75,7 +75,6 @@ namespace Shakes_and_Fidget
                         break;
                     case 3:
                         SaveLoad.GameSave();
-
                         break;
                     case 4:
                         Environment.Exit(0);

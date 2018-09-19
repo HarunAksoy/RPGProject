@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Net;
 
 namespace Shakes_and_Fidget
 {
@@ -7,23 +8,41 @@ namespace Shakes_and_Fidget
     {
         public static void GameSave()
         {
-            TextWriter tw = new StreamWriter("SavedGame.txt");
+            if (File.Exists("SavedGame.txt"))
+            {
+                TextWriter tw = new StreamWriter("SavedGame1.txt");
 
-            tw.WriteLine(Character.name);
-            tw.WriteLine(Performance.gold);
-            tw.WriteLine(Performance.experience);
-            tw.WriteLine(Performance.energy);
-            tw.WriteLine(Level.level);
-
-            tw.Close();
-            Console.Clear();
-            Home.printMenuHome();
+                tw.WriteLine(Character.name);
+                tw.WriteLine(Performance.gold);
+                tw.WriteLine(Performance.experience);
+                tw.WriteLine(Performance.energy);
+                tw.WriteLine(Level.level);
+                
+                tw.Close(); //TextWriter schliessen
+                Console.Clear();
+                Home.printMenuHome(); //Homemenu anzeigen
+            }
+            else
+            {
+                {
+                    TextWriter tw = new StreamWriter("SavedGame.txt");
+                    tw.WriteLine(Character.name);
+                    tw.WriteLine(Performance.gold);
+                    tw.WriteLine(Performance.experience);
+                    tw.WriteLine(Performance.energy);
+                    tw.WriteLine(Level.level);
+                    
+                    tw.Close();
+                    Console.Clear();
+                    Home.printMenuHome();
+                }
+            }
         }
 
         public static void GameLoad()
         {
             Console.Clear();
-            
+
             TextReader tr = new StreamReader("SavedGame.txt");
             Character.name = tr.ReadLine();
             string goldString = tr.ReadLine();
@@ -40,7 +59,6 @@ namespace Shakes_and_Fidget
             Console.Clear();
             Home.printMenuHome();
             Home.startHome();
-
         }
     }
 }
