@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 
 namespace Shakes_and_Fidget
 {
@@ -9,8 +8,6 @@ namespace Shakes_and_Fidget
 
         public void start()
         {
-            
-
             while (isPlaying)
             {
                 printMenu();
@@ -21,18 +18,27 @@ namespace Shakes_and_Fidget
         private static void printMenu()
         {
             Console.Title = "Shakes and Fidget";
-            string Title = @"
-                            ____________________  ________ 
-                            \______   \______   \/  _____/ 
-                             |       _/|     ___/   \  ___ 
-                             |    |   \|    |   \    \_\  \
-                             |____|_  /|____|    \______  /
-                                    \/                  \/ ";
-            Console.WriteLine(Title);
-            Console.WriteLine("\n");
-            Console.WriteLine("Create character [1]");
-            Console.WriteLine("Load game [2]");
-            Console.WriteLine("Quit [3]");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"
+                                #######                  #                                          
+                                   #    #    # ######    #       ######  ####  ###### #    # #####  
+                                   #    #    # #         #       #      #    # #      ##   # #    # 
+                                   #    ###### #####     #       #####  #      #####  # #  # #    # 
+                                   #    #    # #         #       #      #  ### #      #  # # #    # 
+                                   #    #    # #         #       #      #    # #      #   ## #    # 
+                                   #    #    # ######    ####### ######  ####  ###### #    # #####  
+                                                                                                    
+                                                 ######                       
+                                 ####  ######    #     # ###### #####  ###### 
+                                #    # #         #     # #      #    # #      
+                                #    # #####     ######  #####  #    # #####  
+                                #    # #         #       #      #####  #      
+                                #    # #         #       #      #      #      
+                                 ####  #         #       ###### #      ###### ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(">Press [1] to create a character");
+            Console.WriteLine(">Press [2] to load game");
+            Console.WriteLine(">Press [3] to exit the game");
         }
 
         private static void checkEntryMenu(int entry)
@@ -52,6 +58,7 @@ namespace Shakes_and_Fidget
                     break;
                 default:
                     Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
                     break;
             }

@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Media;
 
 namespace Shakes_and_Fidget
@@ -11,21 +10,24 @@ namespace Shakes_and_Fidget
         public static int energy = 0;
         public static int questEnergy = 100;
 
-
         public static void checkEnergy()
         {
             SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\theme.wav");
 
             if (energy < Home.fullEnergy)
-
             {
-                Console.WriteLine("You need Energy to do a quest!");
+                //Console.WriteLine("You need Energy to do a quest!");
+                Console.Clear();
+                Home.printMenuHome();
+                Console.WriteLine(
+                    "________________________________________________________________________________________________________________________");
+                Console.WriteLine(">You don't have enough Energy to do a Quest!");
+                Home.startHome();
             }
-            
-            else if(Level.level == 1 || Level.level == 2)
+
+            else if (Level.level == 1 || Level.level == 2)
             {
                 energy -= questEnergy;
-
                 myPlayer.Play();
                 Stopwatch.Timer();
             }
@@ -39,20 +41,27 @@ namespace Shakes_and_Fidget
             
             else
             {
-                
-                Console.WriteLine("To be continued!");
+                Console.WriteLine(
+                    "________________________________________________________________________________________________________________________");
+                Console.WriteLine(">You don't have enough energy to do a quest!");
             }
-            
         }
-
 
         public static void checkGold()
         {
             CharacterMethods methods = new CharacterMethods();
+            
             if (gold < 50)
             {
-                Console.WriteLine("You dont have enough gold!");
+                //Console.WriteLine("You dont have enough gold!");
+                Console.Clear();
+                Home.printMenuHome();
+                Console.WriteLine(
+                    "________________________________________________________________________________________________________________________");
+                Console.WriteLine(">You don't have enough gold to refill your energy!");
+                Home.startHome();
             }
+            
             else
             {
                 gold -= 50;

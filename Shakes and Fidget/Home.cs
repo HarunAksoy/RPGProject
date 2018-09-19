@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Shakes_and_Fidget
@@ -12,7 +9,6 @@ namespace Shakes_and_Fidget
         public static int fullEnergy = 100;
         private static bool isChosingHome = true;
         private static bool isChosingQuest = true;
-
 
         public static void startHome()
         {
@@ -30,7 +26,6 @@ namespace Shakes_and_Fidget
             }
         }
 
-
         public static void printMenuHome()
         {
             Console.OutputEncoding = Encoding.Unicode;
@@ -38,25 +33,22 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
-            Console.WriteLine("Name: {0}", Character.name);
+            Console.WriteLine("👤 Name: {0}", Character.name);
             Console.SetCursorPosition(27, 1);
             Console.WriteLine("💰 Gold: {0}", Performance.gold);
             Console.SetCursorPosition(47, 1);
             Console.WriteLine("🟊 Exp: {0}/{1}", Performance.experience, fullExperience);
             Console.SetCursorPosition(67, 1);
-            Console.WriteLine("☕ Energy: {0}/{1}", Performance.energy, fullEnergy);
+            Console.WriteLine("⚡ Energy: {0}/{1}", Performance.energy, fullEnergy);
             Console.SetCursorPosition(87, 1);
             Console.WriteLine("🏆 Level: {0}", Level.level);
             Console.SetCursorPosition(117, 1);
             Console.WriteLine("\n");
-            Console.WriteLine("\n");
-            Console.WriteLine("\n");
-            Console.WriteLine("⛏ Do a Quest  [1]");
-            Console.WriteLine("⛽ Refill Energy [2]  ->  (50 Gold)");
-            Console.WriteLine("💾 Save Game [3]");
-            Console.WriteLine("❌ Quit [4]");
+            Console.WriteLine("⛏ Press [1] to do a Quest");
+            Console.WriteLine("⛽ Press [2] to refill your energy -> (50 Gold)");
+            Console.WriteLine("💾Press [3] to save the game");
+            Console.WriteLine("❌ Press [4] to quit the game");
         }
-
 
         public static void checkEntryHome(int home)
         {
@@ -66,8 +58,8 @@ namespace Shakes_and_Fidget
                     case 1:
                         Console.Clear();
                         Level.checkLevel();
-                        Console.WriteLine("Accept Quest [1]");
-                        Console.WriteLine("Back to Home [2]");
+                        Console.WriteLine("Press [1] to accept the quest");
+                        Console.WriteLine("Press [2] to go back home");
                         startQuest();
                         break;
                     case 2:

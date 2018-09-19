@@ -19,3 +19,4 @@ C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug
 C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes and Fidget.csproj.CoreCompileInputs.cache
 C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.exe
 C:\Users\vmadmin\RiderProjects\RPGProject\RPGProject\Shakes and Fidget\obj\Debug\Shakes_and_Fidget.pdb
+C:\Users\vmadmin\RiderProjects\RPGProject\Shakes and Fidget\obj\Debug\Shakes and Fidget.csproj.CoreCompileInputs.cache

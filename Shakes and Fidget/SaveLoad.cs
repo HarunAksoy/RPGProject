@@ -1,25 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Threading;
 
 namespace Shakes_and_Fidget
 {
     public static class SaveLoad
     {
-        
-
         public static void GameLoad()
         {
             CharacterMethods methods = new CharacterMethods();
             Console.Clear();
-            Console.WriteLine("Ihr Benutzername: ");
+            Console.WriteLine("Type your username to load the game:");
             Character.name = Console.ReadLine();
-            if (File.Exists("SavedGame" + Character.name + ".txt"))
+            if (File.Exists("SaveOf" + Character.name + ".txt"))
             {
-                TextReader tr = new StreamReader("SavedGame" + Character.name + ".txt");
+                TextReader tr = new StreamReader("SaveOf" + Character.name + ".txt");
                 Character.name = tr.ReadLine();
                 string goldString = tr.ReadLine();
                 string expString = tr.ReadLine();
@@ -35,16 +29,17 @@ namespace Shakes_and_Fidget
             else
             {
                 Console.Clear();
-                Console.WriteLine("Dieser Benutzer existiert nicht oder wurde nicht abgespeichert");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("This user doesn't exist!");
             }
         }
 
         public static void GameSave()
         {
             CharacterMethods methods = new CharacterMethods();
-            if (!File.Exists("SavedGame.txt"))
+            if (!File.Exists("SaveOf.txt"))
             {
-                TextWriter tw = new StreamWriter("SavedGame" + Character.name + ".txt");
+                TextWriter tw = new StreamWriter("SaveOf" + Character.name + ".txt");
                 tw.WriteLine(Character.name);
                 tw.WriteLine(Performance.gold);
                 tw.WriteLine(Performance.experience);

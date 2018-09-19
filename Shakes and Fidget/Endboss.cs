@@ -1,20 +1,14 @@
 using System;
-using System.Data;
-using System.Security.Cryptography.X509Certificates;
-
 
 namespace Shakes_and_Fidget
-
 {
     public class Endboss
     {
-        
-
         public static void startGame()
         {
             Console.Title = "Endboss";
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("\n******************************\n\n\tFight Game\n\n******************************\n");
+            Console.WriteLine("\n______________________________\n\n\tFight Game\n\n______________________________\n");                 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("(Press any key to start!)");
             Console.ReadKey();
@@ -35,7 +29,6 @@ namespace Shakes_and_Fidget
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             methods.continueHome();
-            
         }
 
         public static void Youlost()
@@ -80,12 +73,11 @@ namespace Shakes_and_Fidget
             System.Threading.Thread.Sleep(1000);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(
-                "\n-------------------------------------------------\n Punch[p]\n\n Regen[r]\n\n Recharge Energy[e]\n-------------------------------------------------");
-            Console.Write("\n\n Input: ");
+                "\n_________________________________________________\n Punch[p]\n\n Regen[r]\n\n Recharge Energy[e]\n_________________________________________________");
             inp = Console.ReadLine();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("_________________________________________________");
 
             switch (inp)
             {
@@ -123,7 +115,7 @@ namespace Shakes_and_Fidget
 
             Console.WriteLine("\n Health: " + health + "%\n Energy: " + energy + "\n Enemy's health: " + rh + "%");
             health -= rnd.Next(2, 20);
-            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("_________________________________________________");
             System.Threading.Thread.Sleep(1000);
 
 
@@ -131,7 +123,7 @@ namespace Shakes_and_Fidget
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(
-                    "\n-------------------------------------------------\nYou had no energy, so you used 5% of you health to get 10 energy.\n-------------------------------------------------");
+                    "\n_________________________________________________\nYou had no energy, so you used 5% of you health to get 10 energy.\n_________________________________________________");      
                 uh = false;
                 System.Threading.Thread.Sleep(1000);
             }
@@ -139,10 +131,8 @@ namespace Shakes_and_Fidget
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(
-                "\n\n-------------------------------------------------\n\nThe enemy attacked! You health is now at " +
-                health + "%.\n\n-------------------------------------------------\n");
-
-
+                "\n\n_________________________________________________\n\nThe enemy attacked! You health is now at " +
+                health + "%.\n\n_________________________________________________\n");
             goto Act;
         }
     }

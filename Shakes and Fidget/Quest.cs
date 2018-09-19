@@ -3,8 +3,6 @@ using System;
 namespace Shakes_and_Fidget
 {
     public class Quest
-
-
     {
         public static void firstQuest()
         {
@@ -74,9 +72,9 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.WriteLine("\n");
-            Console.WriteLine("Quest Title:");
+            Console.WriteLine("Quest Title: This quest is a DLC.");
             Console.WriteLine(
-                "Quest Description: To be continued!");
+                "Quest Description: This quest is a DLC.");
             Console.WriteLine("\n");
         }
     }
