@@ -59,7 +59,8 @@ namespace Shakes_and_Fidget
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
                 Console.WriteLine(">You don't have enough gold to refill your energy!");
-                Home.startHome();
+                Console.ReadLine();
+                methods.continueHome();
             }
             
             else

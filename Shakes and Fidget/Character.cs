@@ -13,7 +13,7 @@ namespace Shakes_and_Fidget
         private static bool isChosingClass = true;
         private static bool isChosingRace = true;
 
-        public static void checkEntryName()
+        public void checkEntryName()
         {
             Console.WriteLine("Name: ");
             name = Console.ReadLine();

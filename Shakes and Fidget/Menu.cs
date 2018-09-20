@@ -1,5 +1,6 @@
 using System;
 
+
 namespace Shakes_and_Fidget
 {
     public class Menu
@@ -14,10 +15,10 @@ namespace Shakes_and_Fidget
                 checkEntryMenu(Int32.Parse(Console.ReadLine()));
             }
         }
-
+        
         private static void printMenu()
         {
-            Console.Title = "Shakes and Fidget";
+            Console.Title = "The Legend of Pepe";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
                                 #######                  #                                          
@@ -41,13 +42,14 @@ namespace Shakes_and_Fidget
             Console.WriteLine(">Press [3] to exit the game");
         }
 
-        private static void checkEntryMenu(int entry)
+        private void checkEntryMenu(int entry)
         {
             switch (entry)
             {
                 case 1:
                     Console.Clear();
-                    Character.checkEntryName();
+                    Character character = new Character();
+                    character.checkEntryName();
                     Console.Clear();
                     break;
                 case 2:
