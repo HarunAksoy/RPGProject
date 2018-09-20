@@ -16,7 +16,6 @@ namespace Shakes_and_Fidget
 
             if (energy < Home.fullEnergy)
             {
-                //Console.WriteLine("You need Energy to do a quest!");
                 Console.Clear();
                 Home.printMenuHome();
                 Console.WriteLine(
@@ -38,7 +37,7 @@ namespace Shakes_and_Fidget
                 Console.Clear();
                 Endboss.startGame();
             }
-            
+
             else
             {
                 Console.WriteLine(
@@ -50,10 +49,9 @@ namespace Shakes_and_Fidget
         public static void checkGold()
         {
             CharacterMethods methods = new CharacterMethods();
-            
+
             if (gold < 50)
             {
-                //Console.WriteLine("You dont have enough gold!");
                 Console.Clear();
                 Home.printMenuHome();
                 Console.WriteLine(
@@ -62,7 +60,7 @@ namespace Shakes_and_Fidget
                 Console.ReadLine();
                 methods.continueHome();
             }
-            
+
             else
             {
                 gold -= 50;
