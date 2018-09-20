@@ -6,7 +6,7 @@ namespace Shakes_and_Fidget
     {
         public static void Timer()
         {
-            CharacterMethods methods = new CharacterMethods();
+            
             for (int a = 3; a >= 0; a--)
             {
                 Console.Write("You are on quest {0}", a);
@@ -19,9 +19,12 @@ namespace Shakes_and_Fidget
                 {
                     Performance.gold += 50;
                     Level.level++;
-                    //Console.Write wird nicht angezeigt wegen dem Interface
-                    methods.continueHome();
-                    Console.Write("You are done with the quest!");
+                    Console.Clear();
+                    Home.printMenuHome();
+                    Console.WriteLine(
+                        "________________________________________________________________________________________________________________________");
+                    Console.WriteLine(">You are done with the Quest, you've got {0} Gold and you are Level {1}", Performance.gold, Level.level);
+                    Home.startHome();
                 }
             }
         }
