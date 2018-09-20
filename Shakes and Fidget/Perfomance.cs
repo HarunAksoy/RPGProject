@@ -25,14 +25,14 @@ namespace Shakes_and_Fidget
                 Home.startHome();
             }
 
-            else if (Level.level == 1 || Level.level == 2)
+            else if (Level.Level1 == 1 || Level.Level1 == 2)
             {
                 energy -= questEnergy;
                 myPlayer.Play();
                 Stopwatch.Timer();
             }
 
-            else if (Level.level == 3)
+            else if (Level.Level1 == 3)
             {
                 energy -= questEnergy;
                 Console.Clear();

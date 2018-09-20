@@ -18,12 +18,12 @@ namespace Shakes_and_Fidget
                 if (a <= 0)
                 {
                     Performance.gold += 50;
-                    Level.level++;
+                    Level.Level1++;
                     Console.Clear();
                     Home.printMenuHome();
                     Console.WriteLine(
                         "________________________________________________________________________________________________________________________");
-                    Console.WriteLine(">You are done with the Quest, you've got {0} Gold and you are Level {1}", Performance.gold, Level.level);
+                    Console.WriteLine(">You are done with the Quest, you've got {0} Gold and you are Level {1}", Performance.gold, Level.Level1);
                     Home.startHome();
                 }
             }

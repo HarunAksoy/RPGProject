@@ -25,7 +25,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("(Press any key to get to home)");
             Console.ReadKey();
             Performance.gold += 500;
-            Level.level++;
+            Level.Level1++;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             methods.continueHome();
