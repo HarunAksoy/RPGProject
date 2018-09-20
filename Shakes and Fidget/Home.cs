@@ -43,7 +43,7 @@ namespace Shakes_and_Fidget
             Console.SetCursorPosition(67, 1);
             Console.WriteLine("⚡ Energy: {0}/{1}", Performance.energy, fullEnergy);
             Console.SetCursorPosition(87, 1);
-            Console.WriteLine("🏆 Level: {0}", Level.level);
+            Console.WriteLine("🏆 Level: {0}", Level.Level1);
             Console.SetCursorPosition(117, 1);
             Console.WriteLine("\n");
             Console.WriteLine("⛏ Press [1] to do a Quest");
