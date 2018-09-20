@@ -14,6 +14,7 @@ namespace Shakes_and_Fidget
             if (File.Exists("SaveOf" + Character.name + ".txt"))
             {
                 TextReader tr = new StreamReader("SaveOf" + Character.name + ".txt");
+                
                 Character.name = tr.ReadLine();
                 string goldString = tr.ReadLine();
                 string expString = tr.ReadLine();
@@ -23,6 +24,7 @@ namespace Shakes_and_Fidget
                 Performance.experience = Convert.ToInt32(expString);
                 Performance.energy = Convert.ToInt32(enrgyString);
                 Level.level = Convert.ToInt32(lvlString);
+                
                 tr.Close();
                 methods.continueHome();
             }
@@ -40,12 +42,14 @@ namespace Shakes_and_Fidget
             if (!File.Exists("SaveOf.txt"))
             {
                 TextWriter tw = new StreamWriter("SaveOf" + Character.name + ".txt");
+                
                 tw.WriteLine(Character.name);
                 tw.WriteLine(Performance.gold);
                 tw.WriteLine(Performance.experience);
                 tw.WriteLine(Performance.energy);
                 tw.WriteLine(Level.level);
                 tw.Close();
+                
                 Console.Clear();
                 methods.continueHome();
             }
