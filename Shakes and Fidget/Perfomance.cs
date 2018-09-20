@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Media;
+using System.IO;
+using System.Linq;
 
 namespace Shakes_and_Fidget
 {
@@ -67,6 +70,13 @@ namespace Shakes_and_Fidget
                 energy += 100;
                 methods.continueHome();
             }
+        }
+
+
+        public static void checkTime()
+        {
+           
+                
         }
     }
 }

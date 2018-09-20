@@ -14,6 +14,7 @@ namespace Shakes_and_Fidget
         public void continueHome()
         {
             Console.Clear();
+                
             Home.printMenuHome();
             Home.startHome();
         }

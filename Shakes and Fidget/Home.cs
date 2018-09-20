@@ -49,7 +49,8 @@ namespace Shakes_and_Fidget
             Console.WriteLine("⛏ Press [1] to do a Quest");
             Console.WriteLine("⛽ Press [2] to refill your energy -> (50 Gold)");
             Console.WriteLine("💾Press [3] to save the game");
-            Console.WriteLine("❌ Press [4] to quit the game");
+            Console.WriteLine("🏛️Press [4] to track how long you are currently playing");
+            Console.WriteLine("❌ Press [5] to quit the game");
         }
 
         public static void checkEntryHome(int home)
@@ -71,6 +72,9 @@ namespace Shakes_and_Fidget
                         SaveLoad.GameSave();
                         break;
                     case 4:
+                        Performance.checkTime();
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                     default:
