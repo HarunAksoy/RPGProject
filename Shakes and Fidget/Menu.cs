@@ -1,6 +1,5 @@
 using System;
 
-
 namespace Shakes_and_Fidget
 {
     public class Menu
@@ -15,12 +14,13 @@ namespace Shakes_and_Fidget
                 checkEntryMenu(Int32.Parse(Console.ReadLine()));
             }
         }
-        
+
         private static void printMenu()
         {
             Console.Title = "The Legend of Pepe";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
+________________________________________________________________________________________________________________________
                                 #######                  #                                          
                                    #    #    # ######    #       ######  ####  ###### #    # #####  
                                    #    #    # #         #       #      #    # #      ##   # #    # 
@@ -35,7 +35,10 @@ namespace Shakes_and_Fidget
                                 #    # #####     ######  #####  #    # #####  
                                 #    # #         #       #      #####  #      
                                 #    # #         #       #      #      #      
-                                 ####  #         #       ###### #      ###### ");
+                                 ####  #         #       ###### #      ###### 
+________________________________________________________________________________________________________________________
+");
+            Console.WriteLine("\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(">Press [1] to create a character");
             Console.WriteLine(">Press [2] to load game");
