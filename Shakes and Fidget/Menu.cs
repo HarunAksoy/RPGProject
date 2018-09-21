@@ -6,16 +6,16 @@ namespace Shakes_and_Fidget
     {
         private static bool isPlaying = true;
 
-        public void start()
+        public void Start()
         {
             while (isPlaying)
             {
-                printMenu();
-                checkEntryMenu(Int32.Parse(Console.ReadLine()));
+                PrintMenu();
+                CheckEntryMenu(Int32.Parse(Console.ReadLine()));
             }
         }
 
-        private static void printMenu()
+        private static void PrintMenu()
         {
             Console.Title = "The Legend of Pepe";
             Console.ForegroundColor = ConsoleColor.Green;
@@ -45,14 +45,14 @@ ________________________________________________________________________________
             Console.WriteLine(">Press [3] to exit the game");
         }
 
-        private void checkEntryMenu(int entry)
+        private void CheckEntryMenu(int entry)
         {
             switch (entry)
             {
                 case 1:
                     Console.Clear();
                     Character character = new Character();
-                    character.checkEntryName();
+                    character.CheckEntryName();
                     Console.Clear();
                     break;
                 case 2:

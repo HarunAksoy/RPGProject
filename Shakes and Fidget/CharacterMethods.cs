@@ -7,16 +7,15 @@ namespace Shakes_and_Fidget
         public void ContinueCharacter()
         {
             Console.Clear();
-            Character.printMenuRace();
-            Character.startRace();
+            Character.PrintMenuRace();
+            Character.StartRace();
         }
 
-        public void continueHome()
+        public void ContinueHome()
         {
             Console.Clear();
-                
-            Home.printMenuHome();
-            Home.startHome();
+            Home.PrintMenuHome();
+            Home.StartHome();
         }
     }
 }

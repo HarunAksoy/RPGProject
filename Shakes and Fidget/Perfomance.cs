@@ -13,18 +13,18 @@ namespace Shakes_and_Fidget
         public static int energy = 0;
         public static int questEnergy = 100;
 
-        public static void checkEnergy()
+        public static void CheckEnergy()
         {
             SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\theme.wav");
 
             if (energy < Home.fullEnergy)
             {
                 Console.Clear();
-                Home.printMenuHome();
+                Home.PrintMenuHome();
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
                 Console.WriteLine(">You don't have enough Energy to do a Quest!");
-                Home.startHome();
+                Home.StartHome();
             }
 
             else if (Level.Level1 == 1 || Level.Level1 == 2)
@@ -38,7 +38,7 @@ namespace Shakes_and_Fidget
             {
                 energy -= questEnergy;
                 Console.Clear();
-                Endboss.startGame();
+                Endboss.StartGame();
             }
 
             else
@@ -49,31 +49,31 @@ namespace Shakes_and_Fidget
             }
         }
 
-        public static void checkGold()
+        public static void CheckGold()
         {
             CharacterMethods methods = new CharacterMethods();
 
             if (gold < 50)
             {
                 Console.Clear();
-                Home.printMenuHome();
+                Home.PrintMenuHome();
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
                 Console.WriteLine(">You don't have enough gold to refill your energy!");
                 Console.ReadLine();
-                methods.continueHome();
+                methods.ContinueHome();
             }
 
             else
             {
                 gold -= 50;
                 energy += 100;
-                methods.continueHome();
+                methods.ContinueHome();
             }
         }
 
 
-        public static void checkTime()
+        public static void CheckTime()
         {
            
                 

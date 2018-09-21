@@ -15,47 +15,47 @@ namespace Shakes_and_Fidget
         }
 
 
-        public static void firstLevel()
+        public static void FirstLevel()
         {
-            Quest.firstQuest();
+            Quest.FirstQuest();
         }
 
-        public static void secondLevel()
+        public static void SecondLevel()
         {
-            Quest.secondQuest();
+            Quest.SecondQuest();
         }
 
-        public static void thirdLevel()
+        public static void ThirdLevel()
         {
-            Quest.thirdQuest();
+            Quest.ThirdQuest();
         }
 
-        public static void fourthLevel()
+        public static void FourthLevel()
         {
-            Quest.fourthQuest();
+            Quest.FourthQuest();
         }
 
 
-        public static void checkLevel()
+        public static void CheckLevel()
         {
             if (level == 1)
             {
-                firstLevel();
+                FirstLevel();
             }
 
             if (level == 2)
             {
-                secondLevel();
+                SecondLevel();
             }
 
             if (level == 3)
             {
-                thirdLevel();
+                ThirdLevel();
             }
 
             if (level == 4)
             {
-                fourthLevel();
+                FourthLevel();
             }
         }
     }

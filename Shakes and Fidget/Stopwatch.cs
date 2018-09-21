@@ -20,11 +20,11 @@ namespace Shakes_and_Fidget
                     Performance.gold += 50;
                     Level.Level1++;
                     Console.Clear();
-                    Home.printMenuHome();
+                    Home.PrintMenuHome();
                     Console.WriteLine(
                         "________________________________________________________________________________________________________________________");
                     Console.WriteLine(">You are done with the Quest, you've got {0} Gold and you are Level {1}", Performance.gold, Level.Level1);
-                    Home.startHome();
+                    Home.StartHome();
                 }
             }
         }

@@ -4,7 +4,7 @@ namespace Shakes_and_Fidget
 {
     public class Endboss
     {
-        public static void startGame()
+        public static void StartGame()
         {
             Console.Title = "Endboss";
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -15,12 +15,12 @@ namespace Shakes_and_Fidget
             Action();
         }
 
-        public static void Youwon()
+        public static void YouWon()
         {
             CharacterMethods methods = new CharacterMethods();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n\tYou Won!");
+            Console.WriteLine("\n\tYou've Won!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("(Press any key to get to home)");
             Console.ReadKey();
@@ -28,22 +28,22 @@ namespace Shakes_and_Fidget
             Level.Level1++;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            methods.continueHome();
+            methods.ContinueHome();
         }
 
-        public static void Youlost()
+        public static void YouLost()
         {
             CharacterMethods methods = new CharacterMethods();
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\n\tYou Lost!!!!!!");
+            Console.WriteLine("\n\tYou've Lost!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("(Press any key to get to home)");
             Console.ReadKey();
             Performance.gold += 50;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-            methods.continueHome();
+            methods.ContinueHome();
         }
 
         public static void Action()
@@ -62,12 +62,12 @@ namespace Shakes_and_Fidget
             Console.ForegroundColor = ConsoleColor.Red;
             if (rh < 1)
             {
-                Youwon();
+                YouWon();
             }
 
             if (health < 1)
             {
-                Youlost();
+                YouLost();
             }
 
             System.Threading.Thread.Sleep(1000);

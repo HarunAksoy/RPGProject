@@ -4,7 +4,7 @@ namespace Shakes_and_Fidget
 {
     public class Quest
     {
-        public static void firstQuest()
+        public static void FirstQuest()
         {
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
@@ -21,7 +21,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("\n");
         }
 
-        public static void secondQuest()
+        public static void SecondQuest()
         {
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
@@ -42,7 +42,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("\n");
         }
 
-        public static void thirdQuest()
+        public static void ThirdQuest()
         {
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
@@ -61,7 +61,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("\n");
         }
 
-        public static void fourthQuest()
+        public static void FourthQuest()
         {
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");

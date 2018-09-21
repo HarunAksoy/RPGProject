@@ -13,15 +13,15 @@ namespace Shakes_and_Fidget
         private static bool isChosingClass = true;
         private static bool isChosingRace = true;
 
-        public void checkEntryName()
+        public void CheckEntryName()
         {
             Console.WriteLine("Name: ");
             name = Console.ReadLine();
             if (!File.Exists("SavedOf" + name + ".txt"))
             {
                 Console.Clear();
-                printMenuClasse();
-                startClasse();
+                PrintMenuClasse();
+                StartClasse();
             }
             else
             {
@@ -30,23 +30,23 @@ namespace Shakes_and_Fidget
             }
         }
 
-        public static void startRace()
+        public static void StartRace()
         {
             while (isChosingRace)
             {
-                checkEntryRace(Int32.Parse(Console.ReadLine()));
+                CheckEntryRace(Int32.Parse(Console.ReadLine()));
             }
         }
 
-        public static void startClasse()
+        public static void StartClasse()
         {
             while (isChosingClass)
             {
-                checkEntryClasse(Int32.Parse(Console.ReadLine()));
+                CheckEntryClasse(Int32.Parse(Console.ReadLine()));
             }
         }
 
-        public static void printMenuRace()
+        public static void PrintMenuRace()
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.WriteLine("Choose your race:");
@@ -57,7 +57,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("Press [4] to be a Blood Elf");
         }
 
-        public static void printMenuClasse()
+        public static void PrintMenuClasse()
         {
             Console.WriteLine("Choose your class:");
             Console.WriteLine("_________________________");
@@ -67,7 +67,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("Press [4] to be a Warrior");
         }
 
-        private static void checkEntryRace(int _race)
+        private static void CheckEntryRace(int _race)
         {
             CharacterMethods methods = new CharacterMethods();
 
@@ -76,19 +76,19 @@ namespace Shakes_and_Fidget
                 {
                     case 1:
                         Console.WriteLine("Human [1]{0}", race);
-                        methods.continueHome();
+                        methods.ContinueHome();
                         break;
                     case 2:
                         Console.WriteLine("Blood Elf [2]{0}", race);
-                        methods.continueHome();
+                        methods.ContinueHome();
                         break;
                     case 3:
                         Console.WriteLine("Gnome [3]{0}", race);
-                        methods.continueHome();
+                        methods.ContinueHome();
                         break;
                     case 4:
                         Console.WriteLine("Goblin [4]{0}", race);
-                        methods.continueHome();
+                        methods.ContinueHome();
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -98,7 +98,7 @@ namespace Shakes_and_Fidget
             }
         }
 
-        private static void checkEntryClasse(int _classe)
+        private static void CheckEntryClasse(int _classe)
         {
             CharacterMethods methods = new CharacterMethods();
             {

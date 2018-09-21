@@ -10,23 +10,23 @@ namespace Shakes_and_Fidget
         private static bool isChosingHome = true;
         private static bool isChosingQuest = true;
 
-        public static void startHome()
+        public static void StartHome()
         {
             while (isChosingHome)
             {
-                checkEntryHome(Int32.Parse(Console.ReadLine()));
+                CheckEntryHome(Int32.Parse(Console.ReadLine()));
             }
         }
 
-        public static void startQuest()
+        public static void StartQuest()
         {
             while (isChosingQuest)
             {
-                checkEntryQuest(Int32.Parse(Console.ReadLine()));
+                CheckEntryQuest(Int32.Parse(Console.ReadLine()));
             }
         }
 
-        public static void printMenuHome()
+        public static void PrintMenuHome()
         {
             Console.OutputEncoding = Encoding.Unicode;
             
@@ -53,26 +53,26 @@ namespace Shakes_and_Fidget
             Console.WriteLine("❌ Press [5] to quit the game");
         }
 
-        public static void checkEntryHome(int home)
+        public static void CheckEntryHome(int home)
         {
             {
                 switch (home)
                 {
                     case 1:
                         Console.Clear();
-                        Level.checkLevel();
+                        Level.CheckLevel();
                         Console.WriteLine("Press [1] to accept the quest");
                         Console.WriteLine("Press [2] to go back home");
-                        startQuest();
+                        StartQuest();
                         break;
                     case 2:
-                        Performance.checkGold();
+                        Performance.CheckGold();
                         break;
                     case 3:
                         SaveLoad.GameSave();
                         break;
                     case 4:
-                        Performance.checkTime();
+                        Performance.CheckTime();
                         break;
                     case 5:
                         Environment.Exit(0);
@@ -84,16 +84,16 @@ namespace Shakes_and_Fidget
             }
         }
 
-        private static void checkEntryQuest(int task)
+        private static void CheckEntryQuest(int task)
         {
             CharacterMethods methods = new CharacterMethods();
             switch (task)
             {
                 case 1:
-                    Performance.checkEnergy();
+                    Performance.CheckEnergy();
                     break;
                 case 2:
-                    methods.continueHome();
+                    methods.ContinueHome();
                     break;
                 default:
                     Console.WriteLine("Invalid Input! Try again.");

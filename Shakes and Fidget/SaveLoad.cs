@@ -24,7 +24,7 @@ namespace Shakes_and_Fidget
                 Performance.energy = Convert.ToInt32(enrgyString);
                 Level.Level1 = Convert.ToInt32(lvlString);
                 tr.Close();
-                methods.continueHome();
+                methods.ContinueHome();
             }
             else
             {
@@ -47,7 +47,7 @@ namespace Shakes_and_Fidget
                 tw.WriteLine(Level.Level1);
                 tw.Close();
                 Console.Clear();
-                methods.continueHome();
+                methods.ContinueHome();
             }
         }
     }
