@@ -16,7 +16,7 @@ namespace Shakes_and_Fidget
                 "________________________________________________________________________________________________________________________");
             Console.WriteLine("\n");
             Console.WriteLine("Quest Title: The wise old man");
-            Console.WriteLine("Quest Description: Hey you, listen! Thou shalt bring the white man to Maerwymm.");
+            Console.WriteLine("Quest Description: Hey you, listen! Thou shalt bring the white man to Asgard.");
             Console.WriteLine("And think of some interesting topics for discussion on the go. And now - let's dance!");
             Console.WriteLine("\n");
         }
@@ -32,8 +32,8 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.WriteLine("\n");
-            Console.WriteLine("Quest Title: The holy shield");
-            Console.WriteLine("Quest Description: Hey, psst ... yes, you!I am looking for a holy shield.");
+            Console.WriteLine("Quest Title: The holy sword");
+            Console.WriteLine("Quest Description: Hey, psst ... yes, you!I am looking for a holy sword.");
             Console.WriteLine(
                 "Go to the Shadow Mountains. When you do a rain dance there, the thing you're looking for falls from the sky.");
             Console.WriteLine(
