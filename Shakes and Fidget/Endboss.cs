@@ -85,9 +85,7 @@ namespace Shakes_and_Fidget
             {
                 case "1":
                     energy -= rnd.Next(2, 6);
-                    ;
                     pepeHealth -= rnd.Next(9, 15);
-                    ;
                     Console.WriteLine(">You attacked Pepe with the holy sword!");
                     Console.WriteLine("\n");
                     break;
@@ -125,18 +123,13 @@ namespace Shakes_and_Fidget
             if (refillEnergy == true)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(
-                    "\n_________________________________________________\nYou had no energy, so you used 5% of you health to get 10 energy.\n_________________________________________________");
+                Console.WriteLine("You had no energy, so you used 5% of your health to get 10 energy.");
                 refillEnergy = false;
                 System.Threading.Thread.Sleep(1000);
             }
 
-
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Pepe attacked you! Your health is now + myHealth +");
-            Console.WriteLine(
-                "\n\n_________________________________________________\n\nThe enemy attacked! You health is now at " +
-                myHealth + "%.\n\n_________________________________________________\n");
+            Console.WriteLine("Pepe attacked you! Your health is now" + myHealth);
             goto Act;
         }
     }
