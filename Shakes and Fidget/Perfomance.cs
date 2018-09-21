@@ -77,9 +77,14 @@ namespace Shakes_and_Fidget
         }
 
 
-        public static void CheckTime()
+        public static void Shop()
         {
-           
+           List<string> list = new List<string>();
+            list.Add("In Bearbeitung!");
+            foreach (var VARIABLE in list)
+            {
+                Console.WriteLine(VARIABLE);
+            }
                 
         }
     }

@@ -46,8 +46,7 @@ namespace Shakes_and_Fidget
                 tw.WriteLine( Performance.energy);
                 tw.WriteLine(Level.Level1);
                 tw.Close();
-                Console.Clear();
-                methods.ContinueHome();
+                Environment.Exit(0);
             }
         }
     }

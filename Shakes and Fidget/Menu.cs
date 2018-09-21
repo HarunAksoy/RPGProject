@@ -66,7 +66,6 @@ ________________________________________________________________________________
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
-                    
                     break;
             }
         }

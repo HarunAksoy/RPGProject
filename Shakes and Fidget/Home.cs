@@ -7,23 +7,27 @@ namespace Shakes_and_Fidget
     {
         public static int fullExperience = 100;
         public static int fullEnergy = 100;
-        private static bool isChosingHome = true;
-        private static bool isChosingQuest = true;
+        
 
         public static void StartHome()
         {
-            while (isChosingHome)
-            {
+            
+            
                 CheckEntryHome(Int32.Parse(Console.ReadLine()));
-            }
+            
         }
 
         public static void StartQuest()
         {
-            while (isChosingQuest)
-            {
+            
+            
                 CheckEntryQuest(Int32.Parse(Console.ReadLine()));
-            }
+            
+        }
+
+        public static void StartLeave()
+        {
+            CheckEntryLeave((Console.ReadLine()));
         }
 
         public static void PrintMenuHome()
@@ -47,9 +51,9 @@ namespace Shakes_and_Fidget
             Console.WriteLine("\n");
             Console.WriteLine("⛏ Press [1] to do a Quest");
             Console.WriteLine("⛽ Press [2] to refill your energy -> (50 Gold)");
-            Console.WriteLine("💾Press [3] to save the game");
-            Console.WriteLine("🏛️Press [4] to track how long you are currently playing");
-            Console.WriteLine("❌ Press [5] to quit the game");
+            //Console.WriteLine("💾Press [3] to save the game");
+            Console.WriteLine("🛒Press [3] to get to the Itemshop");
+            Console.WriteLine("❌ Press [4] to quit the game");
         }
 
         public static void CheckEntryHome(int home)
@@ -68,13 +72,14 @@ namespace Shakes_and_Fidget
                         Performance.CheckGold();
                         break;
                     case 3:
-                        SaveLoad.GameSave();
+                        Performance.Shop();
                         break;
                     case 4:
-                        Performance.CheckTime();
-                        break;
-                    case 5:
-                        Environment.Exit(0);
+                        Console.Clear();
+                        Console.WriteLine("Do you want to leave the Game without saving?");
+                        Console.WriteLine("❌ Put [y] to leave the Game without saving");
+                        Console.WriteLine("💾 Put [n] to save the Game");
+                        StartLeave();
                         break;
                     default:
                         Console.WriteLine("Invalid Input! Try again.");
@@ -93,6 +98,22 @@ namespace Shakes_and_Fidget
                     break;
                 case 2:
                     methods.ContinueHome();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input! Try again.");
+                    break;
+            }
+        }
+        
+        private static void CheckEntryLeave(string task)
+        {
+            switch (task)
+            {
+                case "y":
+                    Environment.Exit(0);
+                    break;
+                case "n":
+                    SaveLoad.GameSave();
                     break;
                 default:
                     Console.WriteLine("Invalid Input! Try again.");
