@@ -17,7 +17,7 @@ namespace Shakes_and_Fidget
         {
             Console.WriteLine("Name: ");
             name = Console.ReadLine();
-            if (!File.Exists("SavedOf" + name + ".txt"))
+            if (!File.Exists("SaveOf" + name + ".txt"))
             {
                 Console.Clear();
                 PrintMenuClasse();
@@ -25,6 +25,7 @@ namespace Shakes_and_Fidget
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Username is already taken, you will be redirected to the homepage.");
                 Thread.Sleep(3000);
             }
@@ -70,7 +71,7 @@ namespace Shakes_and_Fidget
         private static void CheckEntryRace(int _race)
         {
             CharacterMethods methods = new CharacterMethods();
-
+            Console.ForegroundColor = ConsoleColor.White;
             {
                 switch (_race)
                 {
@@ -100,6 +101,7 @@ namespace Shakes_and_Fidget
 
         private static void CheckEntryClasse(int _classe)
         {
+            Console.ForegroundColor = ConsoleColor.White;
             CharacterMethods methods = new CharacterMethods();
             {
                 switch (_classe)

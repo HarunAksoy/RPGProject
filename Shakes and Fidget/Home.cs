@@ -28,9 +28,8 @@ namespace Shakes_and_Fidget
 
         public static void PrintMenuHome()
         {
-            Console.OutputEncoding = Encoding.Unicode;
+            Console.ForegroundColor = ConsoleColor.White;
             
-                
 
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");

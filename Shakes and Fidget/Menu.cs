@@ -43,6 +43,7 @@ ________________________________________________________________________________
             Console.WriteLine(">Press [1] to create a character");
             Console.WriteLine(">Press [2] to load game");
             Console.WriteLine(">Press [3] to exit the game");
+            
         }
 
         private void CheckEntryMenu(int entry)
@@ -65,6 +66,7 @@ ________________________________________________________________________________
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
+                    
                     break;
             }
         }
