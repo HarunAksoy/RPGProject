@@ -72,9 +72,11 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Quest Title: This quest is a DLC.");
             Console.WriteLine(
                 "Quest Description: This quest is a DLC.");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\n");
         }
     }

@@ -17,6 +17,7 @@ namespace Shakes_and_Fidget
 
         private static void PrintMenu()
         {
+            //Console title = top left of the exe
             Console.Title = "The Legend of Pepe";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(@"
@@ -43,7 +44,6 @@ ________________________________________________________________________________
             Console.WriteLine(">Press [1] to create a character");
             Console.WriteLine(">Press [2] to load game");
             Console.WriteLine(">Press [3] to exit the game");
-            
         }
 
         private void CheckEntryMenu(int entry)
@@ -66,6 +66,7 @@ ________________________________________________________________________________
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
         }

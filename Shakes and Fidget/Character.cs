@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-using System.Text;
 using System.IO;
 
 namespace Shakes_and_Fidget
@@ -15,7 +14,8 @@ namespace Shakes_and_Fidget
 
         public void CheckEntryName()
         {
-            Console.WriteLine("Name: ");
+            //If your name doesnt exist it will print out the menu where you can choose race & class
+            Console.WriteLine("Your name: ");
             name = Console.ReadLine();
             if (!File.Exists("SaveOf" + name + ".txt"))
             {
@@ -25,8 +25,10 @@ namespace Shakes_and_Fidget
             }
             else
             {
+                //Redirecting to homepage
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Username is already taken, you will be redirected to the homepage.");
+                Console.WriteLine("Game name is already taken, you will be redirected to the homepage.");
+                Console.ForegroundColor = ConsoleColor.White;
                 Thread.Sleep(3000);
             }
         }
@@ -47,9 +49,9 @@ namespace Shakes_and_Fidget
             }
         }
 
+        //Choose the race
         public static void PrintMenuRace()
         {
-            Console.OutputEncoding = Encoding.Unicode;
             Console.WriteLine("Choose your race:");
             Console.WriteLine("___________________________");
             Console.WriteLine("Press [1] to be an Ogre");
@@ -58,6 +60,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("Press [4] to be a Blood Elf");
         }
 
+        //Choose the class
         public static void PrintMenuClasse()
         {
             Console.WriteLine("Choose your class:");
@@ -68,6 +71,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("Press [4] to be a Warrior");
         }
 
+        //Switch case for race
         private static void CheckEntryRace(int _race)
         {
             CharacterMethods methods = new CharacterMethods();
@@ -94,15 +98,17 @@ namespace Shakes_and_Fidget
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid Input! Try again.");
+                        Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
             }
         }
 
+        //Switch case for class
         private static void CheckEntryClasse(int _classe)
         {
-            Console.ForegroundColor = ConsoleColor.White;
             CharacterMethods methods = new CharacterMethods();
+            Console.ForegroundColor = ConsoleColor.White;
             {
                 switch (_classe)
                 {
@@ -127,6 +133,7 @@ namespace Shakes_and_Fidget
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid Input! Try again.");
+                        Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
             }

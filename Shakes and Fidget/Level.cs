@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-
 namespace Shakes_and_Fidget
 {
     public class Level
@@ -13,7 +9,6 @@ namespace Shakes_and_Fidget
             get => level;
             set => level = value;
         }
-
 
         public static void FirstLevel()
         {
@@ -35,7 +30,7 @@ namespace Shakes_and_Fidget
             Quest.FourthQuest();
         }
 
-
+        //Unlocking the levels
         public static void CheckLevel()
         {
             if (level == 1)

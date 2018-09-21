@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 
 namespace Shakes_and_Fidget
 {
@@ -46,7 +45,7 @@ namespace Shakes_and_Fidget
             Console.WriteLine("⛏ Press [1] to do a Quest");
             Console.WriteLine("⛽ Press [2] to refill your energy -> (50 Gold)");
             //Console.WriteLine("💾Press [3] to save the game");
-            Console.WriteLine("🛒Press [3] to get to the Itemshop");
+            Console.WriteLine("🛒Press [3] to get to the item shop");
             Console.WriteLine("❌ Press [4] to quit the game");
         }
 
@@ -76,7 +75,9 @@ namespace Shakes_and_Fidget
                         StartLeave();
                         break;
                     default:
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid Input! Try again.");
+                        Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
             }
@@ -94,11 +95,14 @@ namespace Shakes_and_Fidget
                     methods.ContinueHome();
                     break;
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
         }
 
+        //When you exit the game you can save or not
         private static void CheckEntryLeave(string task)
         {
             switch (task)
@@ -110,7 +114,9 @@ namespace Shakes_and_Fidget
                     SaveLoad.GameSave();
                     break;
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid Input! Try again.");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
         }

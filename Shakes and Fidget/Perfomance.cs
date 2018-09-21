@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Media;
-using System.IO;
-using System.Linq;
 
 namespace Shakes_and_Fidget
 {
@@ -13,21 +10,18 @@ namespace Shakes_and_Fidget
         public static int energy = 0;
         public static int questEnergy = 100;
 
-
+        //Checking if you have enough energy
         public static void CheckEnergy()
         {
-            
-            
-                
-            
-            
             if (energy < Home.fullEnergy)
             {
                 Console.Clear();
                 Home.PrintMenuHome();
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(">You don't have enough Energy to do a Quest!");
+                Console.ForegroundColor = ConsoleColor.White;
                 Home.StartHome();
             }
 
@@ -35,7 +29,6 @@ namespace Shakes_and_Fidget
             {
                 energy -= questEnergy;
                 Stopwatch.Timer();
-                
             }
 
             else if (Level.Level1 == 3)
@@ -49,10 +42,13 @@ namespace Shakes_and_Fidget
             {
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(">You don't have enough energy to do a quest!");
+                Console.ForegroundColor = ConsoleColor.White;
             }
         }
 
+        //Checking if you have enough gold
         public static void CheckGold()
         {
             CharacterMethods methods = new CharacterMethods();
@@ -63,7 +59,9 @@ namespace Shakes_and_Fidget
                 Home.PrintMenuHome();
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(">You don't have enough gold to refill your energy!");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.ReadLine();
                 methods.ContinueHome();
             }
@@ -76,16 +74,17 @@ namespace Shakes_and_Fidget
             }
         }
 
-
+        //Go to the shop (there is nothing to buy)
         public static void Shop()
         {
-           List<string> list = new List<string>();
+            List<string> list = new List<string>();
+            Console.ForegroundColor = ConsoleColor.Red;
             list.Add("In Bearbeitung!");
+            Console.ForegroundColor = ConsoleColor.White;
             foreach (var VARIABLE in list)
             {
                 Console.WriteLine(VARIABLE);
             }
-                
         }
     }
 }
