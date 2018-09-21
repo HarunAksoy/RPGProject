@@ -1,14 +1,19 @@
 using System;
+using System.Media;
 
 namespace Shakes_and_Fidget
 {
     public class Stopwatch
     {
+        
         public static void Timer()
         {
+            SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\theme.wav");
+            myPlayer.Play();
             
-            for (int a = 3; a >= 0; a--)
+            for (int a = 20; a >= 0; a--)
             {
+
                 Console.Write("You are on quest {0}", a);
 
                 System.Threading.Thread.Sleep(1000);
@@ -17,6 +22,7 @@ namespace Shakes_and_Fidget
 
                 if (a <= 0)
                 {
+                    myPlayer.Stop();
                     Performance.gold += 50;
                     Level.Level1++;
                     Console.Clear();
