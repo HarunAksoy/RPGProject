@@ -7,22 +7,16 @@ namespace Shakes_and_Fidget
     {
         public static int fullExperience = 100;
         public static int fullEnergy = 100;
-        
+
 
         public static void StartHome()
         {
-            
-            
-                CheckEntryHome(Int32.Parse(Console.ReadLine()));
-            
+            CheckEntryHome(Int32.Parse(Console.ReadLine()));
         }
 
         public static void StartQuest()
         {
-            
-            
-                CheckEntryQuest(Int32.Parse(Console.ReadLine()));
-            
+            CheckEntryQuest(Int32.Parse(Console.ReadLine()));
         }
 
         public static void StartLeave()
@@ -33,7 +27,7 @@ namespace Shakes_and_Fidget
         public static void PrintMenuHome()
         {
             Console.ForegroundColor = ConsoleColor.White;
-            
+
 
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
@@ -76,9 +70,9 @@ namespace Shakes_and_Fidget
                         break;
                     case 4:
                         Console.Clear();
-                        Console.WriteLine("Do you want to leave the Game without saving?");
-                        Console.WriteLine("❌ Put [y] to leave the Game without saving");
-                        Console.WriteLine("💾 Put [n] to save the Game");
+                        Console.WriteLine("Do you want to leave the game without saving?");
+                        Console.WriteLine("❌ Type [y] to leave the game without saving");
+                        Console.WriteLine("💾 Type [n] to save the game");
                         StartLeave();
                         break;
                     default:
@@ -104,7 +98,7 @@ namespace Shakes_and_Fidget
                     break;
             }
         }
-        
+
         private static void CheckEntryLeave(string task)
         {
             switch (task)

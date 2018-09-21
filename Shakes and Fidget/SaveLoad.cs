@@ -43,7 +43,7 @@ namespace Shakes_and_Fidget
                 tw.WriteLine(Character.name);
                 tw.WriteLine(Performance.gold);
                 tw.WriteLine(Performance.experience);
-                tw.WriteLine( Performance.energy);
+                tw.WriteLine(Performance.energy);
                 tw.WriteLine(Level.Level1);
                 tw.Close();
                 Environment.Exit(0);

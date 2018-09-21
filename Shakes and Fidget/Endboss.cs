@@ -6,38 +6,10 @@ namespace Shakes_and_Fidget
     {
         public static void StartGame()
         {
-            Console.WriteLine("\n______________________________\n\n\tFight Pepe\n\n______________________________\n");
-            Console.WriteLine("(Press any key to fight Pepe...)");
-            Console.ReadKey();
-            Fight();
+            FightPepe();
         }
 
-        public static void YouWon()
-        {
-            CharacterMethods methods = new CharacterMethods();
-            Console.Clear();
-            Console.WriteLine("\n\tYou defeated Pepe and brought peace into the world");
-            Console.WriteLine("(Press any key to get to home)");
-            Console.ReadKey();
-            Performance.gold += 500;
-            Level.Level1++;
-            Console.Clear();
-            methods.ContinueHome();
-        }
-
-        public static void YouLost()
-        {
-            CharacterMethods methods = new CharacterMethods();
-            Console.Clear();
-            Console.WriteLine("\n\tYou couldn't win against Pepe...");
-            Console.WriteLine("(Press any key to get to home)");
-            Console.ReadKey();
-            Performance.gold += 50;
-            Console.Clear();
-            methods.ContinueHome();
-        }
-
-        public static void Fight()
+        public static void FightPepe()
         {
             Random rnd = new Random();
 
@@ -45,49 +17,65 @@ namespace Shakes_and_Fidget
             int energy = 20;
             int pepeHealth = 100;
             bool refillEnergy = false;
-            String inp;
+            String _fight;
 
+            //Stats
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
+            Console.SetCursorPosition(3, 1);
+            Console.WriteLine("🖤 Your health: " + myHealth + "/100");
+            Console.SetCursorPosition(37, 1);
+            Console.WriteLine("⚡ Your energy: " + energy + "/20");
+            Console.SetCursorPosition(74, 1);
+            Console.WriteLine("💀 Pepe's health: " + pepeHealth + "/100");
 
-            Console.Clear();
-            Act:
-            if (pepeHealth < 1)
-            {
-                YouWon();
-            }
+            myHealth -= rnd.Next(2, 20);
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
+            System.Threading.Thread.Sleep(1000);
 
-            if (myHealth < 1)
-            {
-                YouLost();
-            }
-
+            //Fight options
             Console.WriteLine("Press [1] to attack Pepe with the holy sword");
             Console.WriteLine("Press [2] to heal with the magic slurp from Asgard");
             Console.WriteLine("Press [3] to recharge your energy");
-            Console.WriteLine("_________________________________________________");
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
 
-            inp = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("_________________________________________________");
+            _fight = Console.ReadLine();
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
 
-            switch (inp)
+            switch (_fight)
             {
                 case "1":
                     energy -= rnd.Next(2, 6);
                     pepeHealth -= rnd.Next(9, 15);
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(">You attacked Pepe with the holy sword!");
-                    Console.WriteLine("\n");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case "2":
                     myHealth += rnd.Next(10, 30);
                     energy -= rnd.Next(2, 7);
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(">You used the magic slurp from Asgard!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case "3":
                     energy = 20;
-                    Console.WriteLine("You recharged your energy!");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(">You recharged your energy!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
             }
 
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(">Pepe attacked you back! Your health is now " + myHealth + "/100");
+            Console.ForegroundColor = ConsoleColor.White;
+
+            //Energy regen
             if (energy < 1)
             {
                 energy = 10;
@@ -102,24 +90,54 @@ namespace Shakes_and_Fidget
 
             if (refillEnergy == true)
             {
+                Console.WriteLine(
+                    "________________________________________________________________________________________________________________________");
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("You had no energy, so you used 5% of your health to get 10 energy.");
+                Console.ForegroundColor = ConsoleColor.White;
                 refillEnergy = false;
                 System.Threading.Thread.Sleep(1000);
             }
 
-            Console.WriteLine("🖤 Your health: " + myHealth + "/100");
-            Console.WriteLine("⚡ Your energy: " + energy + "/20");
-            Console.WriteLine("💀 Pepe's health: " + pepeHealth + "/100");
+            //Win or Lose the Fight
+            Console.Clear();
+            Act:
+            if (pepeHealth < 1)
+            {
+                YouWon();
+            }
 
-            myHealth -= rnd.Next(2, 20);
-            Console.WriteLine("_________________________________________________");
-            System.Threading.Thread.Sleep(1000);
+            if (myHealth < 1)
+            {
+                YouLost();
+            }
 
-            Console.WriteLine("\n");
-            Console.WriteLine("Pepe attacked you! Your health is now " + myHealth);
-            Console.WriteLine("_________________________________________________");
-            Console.WriteLine("\n");
             goto Act;
+        }
+
+        public static void YouWon()
+        {
+            CharacterMethods methods = new CharacterMethods();
+            Console.Clear();
+            Console.WriteLine("\n\tYou defeated Pepe and brought peace into the world");
+            Console.WriteLine("\n\t(Press any key to get to home)");
+            Console.ReadKey();
+            Performance.gold += 500;
+            Level.Level1++;
+            Console.Clear();
+            methods.ContinueHome();
+        }
+
+        public static void YouLost()
+        {
+            CharacterMethods methods = new CharacterMethods();
+            Console.Clear();
+            Console.WriteLine("\n\tYou couldn't win against Pepe...");
+            Console.WriteLine("\n\t(Press any key to get to home)");
+            Console.ReadKey();
+            Performance.gold += 50;
+            Console.Clear();
+            methods.ContinueHome();
         }
     }
 }
