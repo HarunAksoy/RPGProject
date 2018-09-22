@@ -1,6 +1,6 @@
 namespace Shakes_and_Fidget
 {
-    public class Level
+    public class Level : Menu
     {
         private static int level = 1;
 
