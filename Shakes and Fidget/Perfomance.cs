@@ -79,7 +79,7 @@ namespace Shakes_and_Fidget
         {
             List<string> list = new List<string>();
             Console.ForegroundColor = ConsoleColor.Red;
-            list.Add("In Bearbeitung!");
+            list.Add("In processing!");
             Console.ForegroundColor = ConsoleColor.White;
             foreach (var VARIABLE in list)
             {
