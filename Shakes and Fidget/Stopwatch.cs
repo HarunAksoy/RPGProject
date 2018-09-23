@@ -9,12 +9,24 @@ namespace Shakes_and_Fidget
         public static void Timer()
         {
             //The background music
-            SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\theme.wav");
+            SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\quest.wav");
             myPlayer.Play();
 
-            for (int a = 20; a >= 0; a--)
+            for (int a = 12; a >= 0; a--)
             {
-                Console.WriteLine(" ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine(@"
+                    *    .  *       .             *    .  *       .             *    .  *       .             *    .  *       .        *       *     *    *
+                                             *                        *                         *          .  *        *        .        .  *        *        .     *
+                 *   .        *       .       .       *   .        *       .       .       *   .        *       .       .       *   . *       *       .      * .       *    *
+                           .     *.     * .                       * .      .  *        *        .        .  *        *        .            .  *        *        .     
+                                   .     .  *        *        .     .  *        *        .     .  *        *    *    .     .  *        *        .     .  *        *        .     .  *        *
+                           .          *      .        .                    .        .   .                .        .                    .        .   .                .        . 
+                                      *              *.  *           *                 .        .           .  *               *                     *                   .        .
+                    .  *           *       .   *          * .  *   *.     * .     *.     * .                *            * .     *.     * .     *.     * .                  *.  *           *      
+                                                 .                             .                             .   *                          .                             . 
+                             *          .   *         *          .   *         *          .   *         *          .   *         *          .   *         *          .   *         *          ");
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("You are on quest {0}", a);
 
                 System.Threading.Thread.Sleep(1000);
@@ -31,7 +43,7 @@ namespace Shakes_and_Fidget
                     Console.WriteLine(
                         "________________________________________________________________________________________________________________________");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(">You are done with the Quest, you've got {0} Gold and you are Level {1}",
+                    Console.WriteLine(">You are done with the Quest, you've got {0} Gold and the quest item. You're now Level {1}.",
                         Performance.gold, Level.Level1);
                     Console.ForegroundColor = ConsoleColor.White;
                     Home.StartHome();

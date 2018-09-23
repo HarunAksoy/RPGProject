@@ -26,7 +26,6 @@ namespace Shakes_and_Fidget
         {
             Console.ForegroundColor = ConsoleColor.White;
 
-
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
@@ -69,7 +68,7 @@ namespace Shakes_and_Fidget
                         Console.Clear();
                         Console.WriteLine("Do you want to leave the game without saving?");
                         Console.WriteLine("❌ Type [y] to leave the game without saving");
-                        Console.WriteLine("💾 Type [n] to save the game");
+                        Console.WriteLine("💾Type [n] to save the game");
                         StartLeave();
                         break;
                     default:
