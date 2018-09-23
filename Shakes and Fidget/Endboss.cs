@@ -1,4 +1,5 @@
 using System;
+using System.Media;
 
 namespace Shakes_and_Fidget
 {
@@ -14,8 +15,10 @@ namespace Shakes_and_Fidget
         {
             CharacterMethods methods = new CharacterMethods();
             Console.Clear();
-            Console.WriteLine("\n\tYou defeated Pepe and brought peace into the world");
-            Console.WriteLine("\n\t(Press any key to get to home)");
+            SoundPlayer victory = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\victory.wav");
+            victory.Play();
+            Console.WriteLine("You defeated Pepe and brought peace into the world");
+            Console.WriteLine("\n>Press any key to go home");
             Console.ReadKey();
             Performance.gold += 500;
             Level.Level1++;
@@ -28,8 +31,10 @@ namespace Shakes_and_Fidget
         {
             CharacterMethods methods = new CharacterMethods();
             Console.Clear();
-            Console.WriteLine("\n\tYou couldn't win against Pepe...");
-            Console.WriteLine("\n\t(Press any key to get to home)");
+            SoundPlayer defeat = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\defeat.wav");
+            defeat.Play();
+            Console.WriteLine("You couldn't win against Pepe...");
+            Console.WriteLine("\n>Press any key to go home");
             Console.ReadKey();
             Performance.gold += 50;
             Console.Clear();
@@ -38,6 +43,8 @@ namespace Shakes_and_Fidget
 
         public static void FightPepe()
         {
+            SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\endboss.wav");
+            myPlayer.Play();
             Random rnd = new Random();
 
             int myHealth = 100;
@@ -62,14 +69,10 @@ namespace Shakes_and_Fidget
             //Your and pepe's stats
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
-            Console.SetCursorPosition(7, 1);
             Console.WriteLine("🖤 Your health: " + myHealth + "/100");
-            Console.SetCursorPosition(47, 1);
             Console.WriteLine("⚡ Your energy: " + energy + "/20");
-            Console.SetCursorPosition(84, 1);
             Console.WriteLine("💀 Pepe's health: " + pepeHealth + "/100");
 
-            myHealth -= rnd.Next(2, 20);
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             System.Threading.Thread.Sleep(1000);
@@ -82,6 +85,7 @@ namespace Shakes_and_Fidget
                 "________________________________________________________________________________________________________________________");
 
             _fight = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
 
@@ -90,6 +94,7 @@ namespace Shakes_and_Fidget
             {
                 case "1":
                     energy -= rnd.Next(2, 6);
+                    myHealth -= rnd.Next(2, 20);
                     pepeHealth -= rnd.Next(9, 15);
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(">You attacked Pepe with the holy sword!");
@@ -98,13 +103,13 @@ namespace Shakes_and_Fidget
                 case "2":
                     myHealth += rnd.Next(10, 30);
                     energy -= rnd.Next(2, 7);
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(">You used the magic slurp from Asgard!");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case "3":
                     energy = 20;
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine(">You recharged your energy!");
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
@@ -135,7 +140,7 @@ namespace Shakes_and_Fidget
             {
                 Console.WriteLine(
                     "________________________________________________________________________________________________________________________");
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine(">You had no energy, so you used 5% of your health to get 10 energy.");
                 Console.ForegroundColor = ConsoleColor.White;
                 refillEnergy = false;

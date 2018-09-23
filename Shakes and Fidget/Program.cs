@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 
 namespace Shakes_and_Fidget
 {
@@ -8,6 +9,9 @@ namespace Shakes_and_Fidget
         {
             //Convert unicode
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            //Background music
+            SoundPlayer myPlayer = new SoundPlayer(@"C:\Users\vmadmin\RiderProjects\RPGProject\theme\home.wav");
+            myPlayer.PlayLooping();
             Menu menu = new Menu();
             menu.Start();
         }

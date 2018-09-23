@@ -14,6 +14,7 @@ namespace Shakes_and_Fidget
 
             for (int a = 20; a >= 0; a--)
             {
+                Console.WriteLine(" ");
                 Console.Write("You are on quest {0}", a);
 
                 System.Threading.Thread.Sleep(1000);

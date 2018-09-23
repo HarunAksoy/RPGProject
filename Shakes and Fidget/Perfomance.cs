@@ -78,9 +78,7 @@ namespace Shakes_and_Fidget
         public static void Shop()
         {
             List<string> list = new List<string>();
-            Console.ForegroundColor = ConsoleColor.Red;
-            list.Add("In processing!");
-            Console.ForegroundColor = ConsoleColor.White;
+            list.Add(">The shop is currently unavailable.");
             foreach (var VARIABLE in list)
             {
                 Console.WriteLine(VARIABLE);

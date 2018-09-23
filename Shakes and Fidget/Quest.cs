@@ -9,16 +9,16 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
-            Console.WriteLine("\n");
-            Console.WriteLine("Energy Cost: {0}, Earned gold: 50, Earned XP: 100", Performance.questEnergy);
-            Console.WriteLine("\n");
+            Console.WriteLine("Energy Cost: {0}, Earned gold: 50, Earned item: the magic slurp, Earned XP: 100",
+                Performance.questEnergy);
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
-            Console.WriteLine("\n");
-            Console.WriteLine("Quest Title: The wise old man");
-            Console.WriteLine("Quest Description: Hey you, listen! Thou shalt bring the white man to Asgard.");
+            Console.WriteLine("Quest Title: The magic slurp from Asgard");
+            Console.WriteLine(
+                "Quest Description: Hey you, listen! Thou shalt bring the white man to Asgard and get the magic slurp from Asgard.");
             Console.WriteLine("And think of some interesting topics for discussion on the go. And now - let's dance!");
-            Console.WriteLine("\n");
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
         }
 
         public static void SecondQuest()
@@ -26,12 +26,10 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
-            Console.WriteLine("\n");
-            Console.WriteLine("Energy Cost: {0}, Earned gold: 50, Earned XP: 100", Performance.questEnergy);
-            Console.WriteLine("\n");
+            Console.WriteLine("Energy Cost: {0}, Earned gold: 50, Earned item: the holy sword, Earned XP: 100",
+                Performance.questEnergy);
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
-            Console.WriteLine("\n");
             Console.WriteLine("Quest Title: The holy sword");
             Console.WriteLine("Quest Description: Hey, psst ... yes, you!I am looking for a holy sword.");
             Console.WriteLine(
@@ -39,7 +37,8 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "I always wanted to have such a sign. Supposedly it is true as a cheat, but that's not noticeable anyway.");
             Console.WriteLine("And hurry, please!");
-            Console.WriteLine("\n");
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
         }
 
         public static void ThirdQuest()
@@ -47,18 +46,16 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
-            Console.WriteLine("\n");
-            Console.WriteLine("Energy Cost: {0}, Earned gold: 50", Performance.questEnergy);
-            Console.WriteLine("\n");
+            Console.WriteLine("Energy Cost: {0}, Earned gold: 500", Performance.questEnergy);
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
-            Console.WriteLine("\n");
-            Console.WriteLine("Quest Title: The demon portal");
+            Console.WriteLine("Quest Title: Pepe the destroyer");
             Console.WriteLine(
                 "Quest Description: Do you have time for a small assignment? Journey to the rotting land.");
-            Console.WriteLine("But I do not know exactly, because so far no one has returned from there.");
+            Console.WriteLine("But I do not know exactly, because so far no one has ever won against Pepe.");
             Console.WriteLine("If the rumors are true, I'd like to have that written by you.");
-            Console.WriteLine("\n");
+            Console.WriteLine(
+                "________________________________________________________________________________________________________________________");
         }
 
         public static void FourthQuest()
@@ -66,18 +63,11 @@ namespace Shakes_and_Fidget
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
             Console.SetCursorPosition(7, 1);
-            Console.WriteLine("\n");
-
-            Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("This quest is a DLC.");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(
                 "________________________________________________________________________________________________________________________");
-            Console.WriteLine("\n");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Quest Title: This quest is a DLC.");
-            Console.WriteLine(
-                "Quest Description: This quest is a DLC.");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("\n");
         }
     }
 }

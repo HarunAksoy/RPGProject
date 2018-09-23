@@ -7,7 +7,6 @@ namespace Shakes_and_Fidget
         public static int fullExperience = 100;
         public static int fullEnergy = 100;
 
-
         public static void StartHome()
         {
             CheckEntryHome(Int32.Parse(Console.ReadLine()));
@@ -44,7 +43,6 @@ namespace Shakes_and_Fidget
             Console.WriteLine("\n");
             Console.WriteLine("⛏ Press [1] to do a Quest");
             Console.WriteLine("⛽ Press [2] to refill your energy -> (50 Gold)");
-            //Console.WriteLine("💾Press [3] to save the game");
             Console.WriteLine("🛒Press [3] to get to the item shop");
             Console.WriteLine("❌ Press [4] to quit the game");
         }
